@@ -22,6 +22,8 @@ func main() {
 		err = catFileCmd(os.Args[1:])
 	case "hash-object":
 		err = hashObjectCmd(os.Args[1:])
+	case "ls-tree":
+		err = lsTreeCmd(os.Args[1:])
 	default:
 		err = fmt.Errorf("unknown command %s", command)
 	}
